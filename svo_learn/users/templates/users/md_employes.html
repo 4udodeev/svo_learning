@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>
+      {% block title %}Сотрудники{% endblock %}
+    </title>
+    {% block extra_styles %}
+      <link rel="stylesheet" href="{% static 'css/md_employes.css' %}">
+    {% endblock %}
+  </head>
+  <body>
+    {% block content %}
+      <table id="table-employes">
+        <tr>
+          <th>Табельный номер</th>
+          <th>ФИО</th>
+          <th>Должность</th>
+          <th>Подразделение</th>
+          <th>Дата приема</th>
+          <th>Уволен</th>
+          <th>Дата увольнения</th>
+        </tr>
+        {% for rec in records %}
+          <tr>
+            <td>{{ rec.employee.code }}</td>
+            <td>{{ rec.employee.last_name }} {{ rec.employee.first_name }} {{ rec.employee.middle_name }}</td>
+            <td>{{ rec.name }}</td>
+            <td>{{ rec.subdivision.name }}</td>
+            <td>{{ rec.employee.hire_date }}</td>
+            <td>{{ rec.employee.is_dismiss }}</td>
+            <td>{{ rec.employee.dismiss_date }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    {% endblock %}
+  </body>
+</html>

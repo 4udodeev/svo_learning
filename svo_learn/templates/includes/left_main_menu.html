@@ -1,0 +1,58 @@
+{% load static %}
+<div id="left-main-menu">
+  <img src="{% static 'img/lk_stub.svg' %}" class="menu-image">
+  <ul class="menu">
+    <li class="menu-item">
+      <button class="menu-text">Опросы/тесты</button>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Заявки</button>
+      <ul class="submenu">
+        <li><button>Мои заявки</button></li>
+        <li><button>Согласование заявок</button></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Библиотека</button>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Планы обучения</button>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Отчеты</button>
+      <ul class="submenu">
+        <li><button>Обученность</button></li>
+        <li><button>Результаты обучения</button></li>
+        <li><button>Время обучения</button></li>
+        <li><button>Удовлетворенность</button></li>
+        <li><button>Бюджет на обучение</button></li>
+        <li><button>Договора</button></li>
+        <li><button>Технические отчеты для администратора</button></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Сотрудники</button>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Контрагенты</button>
+    </li>
+    <li class="menu-item">
+      <button class="menu-text">Мастер-данные</button>
+      <ul class="submenu">
+        <li><button>Подразделения</button></li>
+        <li><button onclick="window.location.href = '{% url 'users:md_employes' %}';">Сотрудники</button></li>
+        <li><button>Должности</button></li>
+        <li><button>Типовые должности</button></li>
+        <li><button>Учебные программы</button></li>
+        <li><button>Уровни риска</button></li>
+        <li><button>Факторы опасности</button></li>
+        <li><button>Сертификаты</button></li>
+        <li><button>Группы</button></li>
+        <li><button>Маршруты документооборота</button></li>
+        <li><button>Шаблоны уведомлений</button></li>
+        <li><button>Функции</button></li>
+        <li><button>Виды оборудования</button></li>
+      </ul>
+    </li>
+  </ul>
+</div>
