@@ -16,7 +16,7 @@ urlpatterns = [
         'md_employes/',
         views.md_employes,
         name='md_employes'
-    )
+    ),
 ]
 
 if settings.DEBUG:
